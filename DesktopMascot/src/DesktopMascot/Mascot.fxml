@@ -1,16 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DesktopMascot.MascotController">
+<AnchorPane prefHeight="440.0" prefWidth="255.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DesktopMascot.MascotController">
    <children>
-      <ImageView fx:id="Image" fitHeight="357.0" fitWidth="304.0" layoutX="126.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="Image" fitHeight="357.0" fitWidth="190.0" layoutX="53.0" layoutY="80.0" onContextMenuRequested="#ConectContextMenu" onMouseClicked="#GetTime" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../nc80242.png" />
          </image>
       </ImageView>
+      <Label fx:id="TimeLabel" layoutX="27.0" layoutY="14.0" prefHeight="73.0" prefWidth="202.0" textAlignment="CENTER">
+         <contextMenu>
+            <ContextMenu fx:id="Menu">
+              <items>
+                <MenuItem fx:id="MenuItemDelete" mnemonicParsing="false" onAction="#Delete" text="削除" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </Label>
    </children>
 </AnchorPane>
